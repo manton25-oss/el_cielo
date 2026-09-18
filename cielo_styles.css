@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-fondo: #0b1026;
+  --color-tarjeta: #151d3b;
+  --color-tarjeta-secundaria: #202a4d;
+
+  --color-texto: #f5f7ff;
+  --color-texto-secundario: #b8c2e0;
+
+  --color-acento: #8b7cf6;
+  --color-acento-claro: #b8a9ff;
+
+  --color-sol: #ffd166;
+  --color-luna: #e8eaff;
+
+  --color-boton: #6c5ce7;
+  --color-boton-hover: #5848d6;
+
+  --color-borde: #343e66;
+
+  --font-base: "space-grotesk", sans-serif;
+}
+
+body {
+  color: var(--color-fondo);
+  font-family: var(--font-base);
+  background-color: var(--color-fondo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.tarjeta {
+  background-color: var(--color-tarjeta-secundaria);
+  height: 400px;
+  width: 400px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta header {
+  background: linear-gradient(165deg, var(--color-boton), var(--color-texto-secundario));
+  padding: 1em;
+  line-height: 48px;
+}
+
+.frase {
+  font-size: 1rem;
+}
+
+#btnUbi,
+#btnActualizar {
+  color: var(--color-texto);
+  background-color: var(--color-boton);
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  width: fit-content;
+  font-size: 1.1rem;
+  margin: 0 auto 16px;
+}
+
+#btnActualizar {
+  display: none;
+}
+
+#btnUbi:hover, #btnActualizar:hover {
+  background-color: var(--color-boton-hover);
+  color: var(--color-texto);
+}
+
+#ubi {
+  display: block;
+  width: 100%;
+  background-color: var(--color-texto);
+  width: calc(100% + 2em);
+  margin: 0 -1em -1em;
+}
+
+#cielo {
+  color: var(--color-tarjeta-secundaria);
+  line-height: 1.6;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cieloActivo {
+  flex: 1;
+}
+
+#sun {
+  background-color: var(--color-sol);
+}
+
+#moon {
+  background-color: var(--color-luna);
+}
+
+#sun,
+#moon {
+  text-align: center;
+  color: var(--color-fondo);
+  justify-content: center;
+  align-content: center;
+}
+
+.fotoGata {
+  display: none;
+}
+
+.fotoGata img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
